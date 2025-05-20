@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: flat_files
+    database: RAW_DEV
+    schema: VF_DATA
+    tables:
+      - name: FILE_PRIORITY_SKU
+        description: "FILE_PRIORITY_SKU"
+      - name: FILE_MACOLA_SOLD_TO
+        description: "FILE_MACOLA_SOLD_TO"

@@ -1,14 +1,7 @@
-{% set source_name = 'flat_files' %}
-{% set source_name = 'flat_files' %}
-{% set tables = source(source_name) %}
-
-{% for table in tables %}
-    {{ config(
+{{ config(
         materialized='table',
-        schema='DBT_NNAME',  -- Specify your target schema here
-        name=table.name  -- Use the name of the source table
+        schema='DBT_NNAME'
     ) }}
 
     select *
-    from {{ source(source_name, table.name) }}
-{% endfor %}
+    from {{ source('flat_files', 'FILE_PRIORITY_SKU') }}

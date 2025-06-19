@@ -1,0 +1,8 @@
+git init
+git branch -M main
+git add .
+git status
+git commit -m 'custom message'
+git remote add origin https://github.com/sureska/dbt-core.git -- adding for the first time
+git remote -v
+git push origin main -- to update repository
